@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<input type="text" id="d1"> +
+<input type="text" id="d2">=
+<input type="text" id="d3">
+<p>
+    <button id="btn">点击</button>
+</p>
+<script>
+    //先给按钮绑定一个点击事件
+    $('#btn').click(function () {
+        //然后朝后端发送ajax请求
+        $.ajax({
+            //1.指定朝哪个后端发送请求
+            url:'', // 地址默认不写则朝当前地址提交
+            //2.指定请求方式
+            type:'post', // 不指定默认get
+            //3.数据
+            {#data:{'username': 'tom', 'password': 123 },#}
+            data:{'id1': $('#d1').val(), 'id2': $('#d2').val() },
+            //4.回调函数 当后端返回结果时候会自动触发，args接受后端返回的结果
+            dataType:true, //自动帮你反序列化
+            success:function (args) {
+                {#alert(args)#}
+                //使用dom操作动态渲染到第三个input中
+                $('#d3').val(args)
+            }
+        })
+    })
+</script>
+</body>
+</html>

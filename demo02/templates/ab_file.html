@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<p>username:<input type="text" id="d1"></p>
+<p>password:<input type="password" id="d2"></p>
+<p><input type="file" id="d3"></p>
+<button class="btn btn-info" id="d4">点击</button>
+
+
+<script>
+    $('#d4').on('click', function () {
+        // 1. 需要先利用js中的内置函数 FormData 创建对象
+        let formDateObj = new FormData();
+        // 2. 添加普通的键值对
+        formDateObj.append('username', $('#d1').val());
+        formDateObj.append('password', $('#d2').val());
+        // 3. 添加文件对象
+        {#$('#d3')[0].file[0]  取到文件#}
+        formDateObj.append('myfile', $('#d3')[0].files[0])
+        // 4. 将对象基于ajax发送给后端
+        $.ajax({
+            url:'',
+            type: 'post',
+            data: formDateObj, //直接将对象放在data后面
+            //ajax发送文件需要注意的两个参数
+            contentType: false, // 不使用任何编码，django后端能够自动识别formData对象
+            processData: false, // 告诉你的浏览器不要对你的数据进行任何处理
+            success:function (args) {
+
+            }
+        })
+    })
+</script>
+</body>
+</html>

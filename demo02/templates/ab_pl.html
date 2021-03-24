@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+{% for book_obj in page_queryset %}
+    <p>{{ book_obj.title }}</p>
+<nav aria-label="Page navigation"></nav>
+{% endfor %}
+{#利用自定义分页器直接显示分页器样式#}
+{{ page_obj.page_html|safe }}
+</body>
+</html>

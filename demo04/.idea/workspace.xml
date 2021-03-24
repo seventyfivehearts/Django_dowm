@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="77fbf60f-7e49-4b99-bcbb-f799d7ce1407" name="Default Changelist" comment="创建demo04" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="RunManager">
+    <configuration name="demo04" type="Python.DjangoServer" factoryName="Django server">
+      <module name="demo04" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1794" height="263" key="GridCell.Tab.0.bottom" timestamp="1616579377883">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1794" height="263" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1616579377883" />
+    <state width="1794" height="263" key="GridCell.Tab.0.center" timestamp="1616579377881">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1794" height="263" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1616579377881" />
+    <state width="1794" height="263" key="GridCell.Tab.0.left" timestamp="1616579377880">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1794" height="263" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1616579377880" />
+    <state width="1794" height="263" key="GridCell.Tab.0.right" timestamp="1616579377882">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1794" height="263" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1616579377882" />
+    <state x="765" y="463" width="461" height="187" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1616579143805">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="765" y="463" width="461" height="187" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/72.27.1848.1053@72.27.1848.1053" timestamp="1616579143805" />
+  </component>
+</project>

@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    {#    引入sweetalert#}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'dist/sweetalert.css' %}">
+    <script src="{% static 'dist/sweetalert.min.js' %}"></script>
+    <style>
+        div.sweet-alert h2 {
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <h1 class="text-center">数据展示</h1>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <table class="table-striped table table-hover">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>username</th>
+                    <th>age</th>
+                    <th>gender</th>
+                    <th>actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for user_obj in user_queryset %}
+                    <tr>
+                        <td>{{ user_obj.pk }}</td>
+                        <td>{{ user_obj.username }}</td>
+                        <td>{{ user_obj.age }}</td>
+                        <td>{{ user_obj.get_gender_display }}</td>
+                        <td>
+                            <button class="btn-primary btn-xs">编辑</button>
+                            <button class="btn-danger btn-xs del" delete_id="{{ user_obj.pk }}">删除</button>
+                        </td>
+                    </tr>
+                {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script>
+    $('.del').on('click', function () {
+        alert($(this).attr('delete_id'))
+        // 先将当前标签对象存储起来
+        let currentBtn = $(this)
+        //二次确认弹框
+        swal({
+                title: "你确定吗？",
+                text: "删除的数据是不能够在恢复的",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonClass: "btn-danger",
+                confirmButtonText: "是的，删除",
+                cancelButtonText: "不，我在想想!",
+                closeOnConfirm: false,
+                closeOnCancel: false,
+                // 设置等待
+                showLoaderOnConfirm: true,
+            },
+            function (isConfirm) {
+                if (isConfirm) {
+                    //朝后端发送ajax请求 删除数据之后，在弹出下面的对话框
+                    $.ajax({
+                        {#url:'/delete/user/' + currentBtn.attr('delete_id'),    // 传递主键值#}
+                        url: '/delete/user/',     // 放在请求体里面
+                        type: 'post',
+                        data: {'delete_id': currentBtn.attr('delete_id')},
+                        success: function (args) { //这里获取到从后端返回的JsonResponse
+                            //判断响应状态码，进行不同的处理
+                            if (args.code === 1000) {
+                                swal("删除!", "你的数据已经被删除了", "success");
+                                //删除页面之后刷新页面
+                                //1. 直接刷新当前页面
+                                window.location.reload()
+                                //2.利用dom操作 动态操作标签
+                                currentBtn.parent().parent().remove()
+                            } else {
+                                swal('失败！', '出现了未知的错误', 'info')
+                            }
+                        }
+                    })
+                } else {
+                    swal("不删除", "你的数据还是安全的", "error");
+                }
+            });
+    })
+</script>
+</body>
+</html>
