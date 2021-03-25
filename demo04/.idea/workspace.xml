@@ -10,14 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77fbf60f-7e49-4b99-bcbb-f799d7ce1407" name="Default Changelist" comment="创建demo04">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app01/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app01/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo04/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo04/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo04/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo04/urls.py" afterDir="false" />
-    </list>
+    <list default="true" id="77fbf60f-7e49-4b99-bcbb-f799d7ce1407" name="Default Changelist" comment="cookie session CBV装饰器" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,7 +71,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616579501172</updated>
-      <workItem from="1616579504651" duration="12737000" />
+      <workItem from="1616579504651" duration="12824000" />
     </task>
     <task id="LOCAL-00001" summary="创建demo04">
       <created>1616579527657</created>
@@ -87,7 +80,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616579527657</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="cookie session CBV装饰器">
+      <created>1616653224520</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1616653224520</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,32 +107,33 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="创建demo04" />
-    <option name="LAST_COMMIT_MESSAGE" value="创建demo04" />
+    <MESSAGE value="cookie session CBV装饰器" />
+    <option name="LAST_COMMIT_MESSAGE" value="cookie session CBV装饰器" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1794" height="263" key="GridCell.Tab.0.bottom" timestamp="1616650394895">
+    <state width="1794" height="263" key="GridCell.Tab.0.bottom" timestamp="1616653266953">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1794" height="263" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1616650394895" />
-    <state width="1794" height="263" key="GridCell.Tab.0.center" timestamp="1616650394892">
+    <state width="1794" height="263" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1616653266953" />
+    <state width="1794" height="263" key="GridCell.Tab.0.center" timestamp="1616653266951">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1794" height="263" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1616650394892" />
-    <state width="1794" height="263" key="GridCell.Tab.0.left" timestamp="1616650394890">
+    <state width="1794" height="263" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1616653266951" />
+    <state width="1794" height="263" key="GridCell.Tab.0.left" timestamp="1616653266950">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1794" height="263" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1616650394890" />
-    <state width="1794" height="263" key="GridCell.Tab.0.right" timestamp="1616650394894">
+    <state width="1794" height="263" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1616653266950" />
+    <state width="1794" height="263" key="GridCell.Tab.0.right" timestamp="1616653266952">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1794" height="263" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1616650394894" />
-    <state x="591" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2" timestamp="1616579533506">
+    <state width="1794" height="263" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1616653266952" />
+    <state x="591" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2" timestamp="1616653232085">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="591" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1616579533506" />
-    <state x="765" y="463" width="461" height="187" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1616579516589">
+    <state x="591" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1616653232085" />
+    <state x="765" y="463" width="461" height="187" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1616653186369">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="765" y="463" width="461" height="187" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/72.27.1848.1053@72.27.1848.1053" timestamp="1616579516589" />
+    <state x="765" y="463" width="461" height="187" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/72.27.1848.1053@72.27.1848.1053" timestamp="1616653186369" />
   </component>
 </project>
