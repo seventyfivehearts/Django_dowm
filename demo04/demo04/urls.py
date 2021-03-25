@@ -15,7 +15,21 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-
+from app01 import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^login/', views.login),
+    url(r'^home/', views.home),
+    url(r'^index/', views.index),
+    url(r'^func1/', views.func1),
+    # 注销登录
+    url(r'^logout/', views.logout),
+    # 操作session
+    url(r'^set_session/', views.set_session),
+    # 获取session
+    url(r'^get_session/', views.get_session),
+
+    # 获取cbv
+    url(r'^mylogin/', views.MyLogin.as_view()),
+
 ]
