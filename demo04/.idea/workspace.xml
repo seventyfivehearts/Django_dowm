@@ -10,7 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77fbf60f-7e49-4b99-bcbb-f799d7ce1407" name="Default Changelist" comment="cookie session CBV装饰器" />
+    <list default="true" id="77fbf60f-7e49-4b99-bcbb-f799d7ce1407" name="Default Changelist" comment="cookie session CBV装饰器">
+      <change afterPath="$PROJECT_DIR$/../demo05/app01/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo05/demo05/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../demo05/demo05/settings.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,6 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1616579501172</updated>
       <workItem from="1616579504651" duration="12824000" />
+      <workItem from="1616660029939" duration="60000" />
     </task>
     <task id="LOCAL-00001" summary="创建demo04">
       <created>1616579527657</created>
