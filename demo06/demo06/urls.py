@@ -15,7 +15,18 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from app01 import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    # 登录功能
+    url(r'^login/', views.login),
+    # 主页
+    url(r'^home/', views.home),
+    # 修改密码
+    url(r'^set_password/', views.set_password),
+    # 注销功能
+    url(r'^logout/', views.logout),
+    # 注册功能
+    url(r'^register/', views.register)
 ]
